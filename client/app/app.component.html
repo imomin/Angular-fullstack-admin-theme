@@ -1,0 +1,12 @@
+<div [ngClass]="{'wrapper':isLoggedIn}">
+    <div *ngIf="isLoggedIn" class="sidebar" data-color="red" data-image="">
+        <sidebar></sidebar>
+    </div>
+    <div [ngClass]="{'main-panel':isLoggedIn}">
+        <navbar *ngIf="isLoggedIn"></navbar>
+        <router-outlet></router-outlet>
+        <div *ngIf="isLoggedIn" class="">
+            <footer-cmp></footer-cmp>
+        </div>
+    </div>
+</div>
